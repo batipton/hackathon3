@@ -1,0 +1,55 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 12px 8px 8px 8px;
+  border-radius: 6px;
+  margin-top: 1em;
+}
+
+.profile-picture-and-action-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.action-wrapper {
+  display: flex;
+  padding: 6px 0px;
+}
+.content-margin-separator {
+  flex: 50%;
+}
+.edit-profile-button {
+  padding: 4px 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-width: 0px;
+  border-radius: 6px;
+}
+.edit-profile-button p {
+  margin: 0px;
+}
+
+.action-btn-wrapper {
+  padding: 4px 0px;
+}
+.fol-unf-button {
+  padding: 4px 12px;
+  margin-top: 0px;
+  cursor: pointer;
+  background-color: #ffda0fe6;
+  border-width: 0px;
+  border-radius: 6px;
+}
+.fol-unf-button:hover {
+  background-color: #f9d301e7;
+}
+
+.profile-info-item-separator {
+  margin: 10px;
+  height: 1px;
+  background-color: transparent;
+}
+.bio-wrapper {
+  padding: 0px 4px;
+}

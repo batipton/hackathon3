@@ -1,0 +1,53 @@
+<div class="posts-wrapper">
+  <% posts.forEach(function(post) { %>
+  <div class="post">
+    <div class="profile-item">
+      <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+      <h1 class="profile-item-name"><a href="/profile/<%= post.author %>"><%= post.author %></a></h1>
+      <div class="profile-item-margin"></div>
+    </div>
+    <div class="post-content-wrapper">
+      <p class="post-content">
+        <%= post.text %>
+      </p>
+    </div>
+    <div class="post-meta-information-wrapper">
+      <div class="add-tip">
+        <p id="tips<%= post._id %>"><%= post.tips %></p>
+        <i class="fa-solid fa-sack-dollar" onclick="tip(`<%= post._id %>`, `<%= post.author %>`)"></i>
+      </div>
+      <div class="add-comment">
+        <p id="showcomments"><%= post.comments.length %></p>
+        <i class="fa-solid fa-comment" onclick="showcomments('<%= post._id %>')"></i>
+      </div>
+    </div>
+    <div class="comment-section-visibility-wrapper" id="comments<%= post._id %>" style="display: none;">
+      <div class="comment-section-wrapper">
+        <div class="make-comment-section-wrapper">
+          <div class="profile-item">
+            <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+            <h1 class="profile-item-name"><a href="/profile/<%= user.name %>"><%= user.name %></a></h1>
+            <div class="profile-item-margin"></div>
+          </div>
+          <div class="create-comment-textarea-wrapper">
+            <textarea class="create-comment-textarea" id="commentinput<%= post._id %>" placeholder="Comment on <%= post.author %>'s post"></textarea>
+          </div>
+          <button class="submit-comment-button" onclick = "comment('<%= post._id %>')">Comment</button>
+        </div>
+        <% post.comments.forEach(function(comment) { %>
+          <div class="comment-wrapper">
+            <div class="profile-item">
+              <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+              <h1 class="profile-item-name"><a href="/profile/<%= comment.name %>"><%= comment.name %></a></h1>
+              <div class="profile-item-margin"></div>
+            </div>
+            <div class="comment-content-wrapper">
+               <p><%= comment.text %></p>
+            </div>
+          </div>
+        <% }) %>
+        </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

@@ -1,0 +1,242 @@
+body {
+  margin: 0px;
+}
+
+.content-container {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.banner-wrapper {
+  width: 30%;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.banner-menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page-header {
+  text-align: center;
+  background-color: #272a33;
+  padding: 15px 100px 15px 15px;
+}
+
+.search-bar-container {
+  display: flex;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+.search-bar-container input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 4px 12px;
+  border-width: 1px;
+}
+.search-icon-wrapper {
+  border-left: 2px solid white;
+}
+
+.search-results {
+  position: absolute;
+  visibility: hidden;
+  border: 1px solid #272a33;
+  top: 7%;
+  left: 4%;
+  width: 66.5%;
+}
+
+.sr-profile-item-wrapper {
+  display: flex;
+  padding: 12px 12px;
+  background-color: white;
+  z-index: 3;
+}
+
+.sr-profile-item-wrapper:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.sr-profile-item {
+
+}
+
+.sr-profile-name-and-bio {
+  margin: auto 16px;
+}
+
+.sr-profile-item-name {
+  font-weight: 300;
+  font-size: 26px;
+  margin: 0px;
+}
+
+.sr-pfp {
+
+}
+
+.fa-solid.fa-magnifying-glass {
+  font-size: 14px;
+  padding: 6px 6px;
+  transform: rotate(90deg);
+  color: white;
+}
+
+.quicklinks-container {
+  margin-left: 5%;
+}
+
+.profile-item {
+  display: flex;
+  margin-top: 1em;
+}
+.profile-item img {
+  margin-right: 8px;
+}
+.profile-item-name {
+  margin: 0px;
+  font-weight: 300;
+  font-size: 26px;
+  padding-top: 6px;
+}
+.profile-item-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profile-item-margin {
+  margin: auto;
+}
+.profile-item-elipses {
+  padding-top: 8px;
+  border-radius: 50%;
+}
+.profile-item-elipses:hover {
+  cursor: pointer;
+}
+.profile-item-elipses:hover span{
+  cursor: pointer;
+  border-color: #ffda0fe6;
+  background-color: #ffda0fe6;
+}
+.dot {
+  height: 2px;
+  width: 2px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.logout-dropdown {
+  position: relative;
+  top: 10px;
+  right: 135px;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  position: absolute;
+  min-width: 160px;
+  z-index: 2;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.post-button-item {
+  display: flex;
+  justify-content: flex-end;
+}
+.post-button {
+  padding: 4px 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  background-color: #ffda0fe6;
+  border-width: 0px;
+  border-radius: 6px;
+}
+.post-button:hover {
+  background-color: #f9d301e7;
+}
+
+.quicklinks-menu {
+  list-style-type: none;
+  padding: 0px;
+}
+.menu-item {
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+.menu-item a {
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: min-content max-content;
+}
+.menu-item-v1 {
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+.menu-item-v1 a {
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: min-content max-content max-content;
+}
+.menu-item a i {
+  margin-right: 8px;
+}
+.menu-item:hover {
+  background: #ffda0fe6;
+  cursor: pointer;
+}
+.separator {
+  border: none;
+  height: 1px;
+  margin: 4px;
+  background: #272a33;
+}

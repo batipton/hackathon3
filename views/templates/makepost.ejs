@@ -1,0 +1,21 @@
+<div class="post-create-content-wrapper">
+  <div class="create-post-header">
+    <h1>Make Post</h1>
+  </div>
+  <div class="profile-item-container">
+    <div class="profile-item">
+      <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+      <h1 class="profile-item-name"><a href="/profile/<%= user.name %>"><%= user.name %></a></h1>
+      <div class="profile-item-margin"></div>
+    </div>
+  </div>
+  <form action="/home/post" method="POST">
+    <div class="create-post-textarea-wrapper">
+      <textarea class="create-post-textarea" name="post" minlength="1" maxlength="500"
+      required placeholder="Share something to your friends"></textarea>
+    </div>
+    <div class="submit-post-button-wrapper">
+      <button class="submit-post-button" type="submit">Post</button>
+    </div>
+  </form>
+</div>

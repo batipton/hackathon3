@@ -1,0 +1,27 @@
+.show-people-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.profile-item-wrapper {
+  display: flex;
+  padding: 12px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 1em;
+}
+
+
+.profile-item-margin-separator {
+  flex: 50%;
+}
+
+.profile-name-and-bio{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 6px;
+}
+
+.profile-item-fol-but-wrapper {
+  padding: 12px 0px;
+}

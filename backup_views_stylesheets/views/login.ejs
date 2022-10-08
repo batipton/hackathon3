@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/auth.css">
+  </head>
+  <body>
+    <div class="header-wrapper"></div>
+    <div class="main-wrapper">
+      <div class="auth-form-wrapper">
+        <div class="auth-form-header">
+          <h1>Sign in to Tips</h1>
+        </div>
+        <% if (messages.error) { %>
+          <div class="incorrect-auth-attempt">
+            <p><%= messages.error %></p>
+          </div>
+        <% } %>
+        <div class="auth-form">
+          <form action="/login" method="POST">
+            <label for="name">Username</label>
+            <input type="text" id="name" name="name" autocomplete="username" required>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+              <button type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="create-account-link">
+          <a href="/register">Want an account?</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper"></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/sidenav.css">
+    <link rel="stylesheet" href="/stylesheets/topnav.css">
+    <link rel="stylesheet" href="/stylesheets/posts.css">
+    <script src="https://kit.fontawesome.com/39c203329b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <%- include("templates/topnav"); -%>
+    <%- include("templates/sidenav"); -%>
+    <section id="main">
+      <div class="user-handle">
+      </div>
+      <form action="/home/post" method="POST">
+        <div id="createpostdiv">
+          <textarea id="createpost" name="post" placeholder="Post To Tips Connect"
+          cols="20" rows="10" minlength="1" maxlength="500" required></textarea>
+        </div>
+        <button id="submitpost" type="submit">Post</button>
+      </form>
+      <%- include("templates/posts.ejs"); -%>
+    </section>
+  </body>
+  <script src="/scripts/main.js"></script>
+</html>

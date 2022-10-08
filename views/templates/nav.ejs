@@ -1,0 +1,44 @@
+<header class="banner-wrapper">
+  <div class="banner-menu-container">
+    <div class="page-header">
+      <div class="search-bar-container">
+        <input id="search" autocomplete="off" type="text" placeholder="Search Tips..." onkeyup="search()"></input>
+        <div class="search-icon-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+    <div class="quicklinks-container">
+      <div class="profile-item">
+        <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+        <h1 class="profile-item-name"><a href="/profile/<%= user.name %>"><%= user.name %></a></h1>
+        <div class="profile-item-margin"></div>
+        <div class="profile-item-elipses" onclick="showLogout()">
+          <div class="logout-dropdown">
+            <div id="myDropdown" class="dropdown-content">
+              <div onclick="logout()"><a>Logout</a></div>
+            </div>
+          </div>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <ul class="quicklinks-menu">
+        <li class="menu-item"><a href="/home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+        <li class="menu-item"><a href="/trending"><i class="fa-solid fa-arrow-trend-up"></i><span>Trending</span></a></li>
+        <li class="menu-item"><a href="/people"><i class="fa-solid fa-user-group"></i><span>People</span></a></li>
+        <li class="separator"></li>
+        <li class="menu-item"><a href="/notifications"><i class="fa-solid fa-bell"></i><span>Notifications</span></a></li>
+        <li class="menu-item"><a href="/wallet"><i class="fa-solid fa-wallet"></i><span>Wallet <span><%= user.tokens %></span></span></a></li>
+        <li class="separator"></li>
+        <li class="menu-item"><a href="/help"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></li>
+        <li class="menu-item"><a href="/settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+      </ul>
+      <div class="post-button-item">
+        <button class="post-button">Add Post</button>
+      </div>
+    </div>
+  </div>
+</header>

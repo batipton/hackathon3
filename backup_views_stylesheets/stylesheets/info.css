@@ -1,0 +1,31 @@
+#infocontainer {
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#infocontainerheader {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.fa-solid.fa-marker {
+  font-size: 17px;
+  float: right;
+}
+.fa-solid.fa-marker:hover {
+  cursor: pointer;
+}
+
+#userinfo p {
+    margin-top: 5px;
+}
+#bio {
+
+}
+#birthday {
+
+}
+#occupation {
+
+}

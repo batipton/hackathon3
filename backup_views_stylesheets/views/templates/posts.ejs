@@ -1,0 +1,29 @@
+<div id="posts">
+  <% posts.forEach(function(post) { %>
+    <div class="post" id=<%= post._id %>>
+      <% if(post.kind === "original") { %>
+        <h3 class="postusername"><a style="color: white" href="/profile/<%= post.author %>"><%=post.author%></a></h3>
+      <% } else { %>
+        <h3 class="postusername"><a style="color: white" href="/profile/<%= post.author %>"><%=post.author%></a> shared a post by <a style="color: white" href="/profile/<%= post.shared.author %>"><%= post.shared.author %></a></h3>
+      <% } %>
+      <p><%= post.text %></p>
+      <%= post.time.getMonth() + 1 %>/<%= post.time.getDate() %>/<%= post.time.getFullYear() %>
+      <div id="bottompostcontainer">
+        <p class="tips" id="tips<%= post._id %>"><%= post.tips %></p>
+        <i class="fa-solid fa-sack-dollar" onclick="tip(`<%= post._id %>`, `<%= post.author %>`)"></i>
+        <p class="commentamount" id="showcomments"><%= post.comments.length %></p>
+        <i onclick="showcomments('<%= post._id %>')" class="fa-solid fa-comment"></i>
+        <p class="sharesamount"><%= post.shares %></p>
+        <i class="fa-solid fa-share" onclick="share(`<%= post._id %>`, `<%= post.author %>`)"></i>
+      </div>
+      <div id="comments<%= post._id %>" style="display: none;">
+        <% post.comments.forEach(function(comment) { %>
+          <p id="comment"><a href="/profile/<%= comment.name %>"><%= comment.name %></a><br>
+             <%= comment.text %></P>
+        <% }) %>
+        <input type="text" id="commentinput<%= post._id %>" name="comment" required>
+        <button onclick = "comment('<%= post._id %>')">Comment</button>
+      </div>
+    </div>
+  <% }) %>
+</div>

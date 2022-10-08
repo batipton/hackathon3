@@ -1,0 +1,13 @@
+<div id="infocontainer">
+    <h1 id="infocontainerheader"><%= userinfo.name %><% if(meta.home) { %><i class="fa-solid fa-marker" onclick="window.location.href='./../settings/edit'"></i><% } %></h1>
+    <% if(!meta.home && !meta.following) { %>
+      <button onclick="follow(`<%= userinfo.name %>`)">follow</button>
+    <% } else if(!meta.home) { %>
+      <button onclick="unfollow(`<%= userinfo.name %>`)">unfollow</button>
+    <% } %>
+    <div id="userinfo">
+      <p id="bio"><%= userinfo.bio %></p>
+      <% if(userinfo.birthday) { %> <p id="birthday">Birthday: <%= userinfo.birthday %></p> <% } %>
+      <% if(userinfo.occupation) { %> <p id="occupation">Occupation: <%= userinfo.occupation %></p> <% } %>
+    </div>
+</div>

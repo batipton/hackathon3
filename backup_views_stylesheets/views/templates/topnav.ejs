@@ -1,0 +1,39 @@
+<nav class="topbanner">
+  <div id="topbannerheader">
+      <div id="tokenswrapper">
+        <p id="tokens"> Tokens: <%= user.tokens %></p>
+      </div>
+      <div id="profilewrapper">
+          <p id="profile"><%= user.name %>&#9662</p>
+          <div id="profiledropdownmenu">
+            <div class="dropdownmenuitem"><a href="/profile/<%= user.name %>">profile</a></div>
+            <div class="dropdownmenuitem"><a href="/settings">settings</a></div>
+            <div id="menudivider"></div>
+            <div class="dropdownmenuitem" onclick="logout()"><a href="#">logout</a></div>
+          </div>
+      </div>
+  </div>
+</nav>
+<script>
+  function logout() {
+    let form = document.createElement("form");
+    form.action = "/logout?_method=DELETE";
+    form.method = "POST";
+    form.style.visibility = "hidden";
+    document.body.appendChild(form);
+    form.submit();
+  }
+
+  document.getElementById("profile").onclick = function(event) {
+    let menu = document.getElementById("profiledropdownmenu");
+    if(menu.style.display == "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+      event.stopPropagation();
+      window.onclick = function(event) {
+        menu.style.display = "none";
+      }
+    }
+  }
+</script>

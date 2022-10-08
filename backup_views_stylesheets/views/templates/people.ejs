@@ -1,0 +1,10 @@
+<div id="peoplecontainer">
+  <% if(people.length > 0) { people.forEach(function(person) { %>
+    <div class="person" id="person<%= person._id -%>">
+      <h3 id="personnameheader"><a href="/profile/<%= person.name %>"><%= person.name %></a></h3>
+      <p id="personbio"><%= person.bio %></p>
+    </div>
+  <% }) } else { %>
+    <h2 style="text-align: center">Nothing to see here!</h2>
+  <% } %>
+</div>

@@ -1,0 +1,79 @@
+/* TOP NAVIGATION BAR STYLESHEET */
+
+.topbanner {
+  position: fixed;
+  z-index: 1;
+  font-size: 20px;
+  float: top;
+  width: 100%;
+  height: 50px;
+}
+#topbannerheader {
+  width: 100%;
+  height: 50px;
+  background: #272727;
+}
+
+#tokenswrapper {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+#tokens {
+  color: white;
+  margin: 0px;
+  margin-top: 13px;
+}
+#profile{
+  margin: 0px;
+  margin-top: 13px;
+}
+#profilewrapper {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+#profilewrapper a {
+  color: #ffda0fe6;
+}
+#profilewrapper p {
+  display: inline-block;
+  margin-top: 13px;
+  color: white;
+}
+#profiledropdownmenu {
+  display: none;
+  position: absolute;
+  background-color: #272727;
+  border: 1px solid #ffda0fe6;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+.dropdownmenuitem {
+  padding: 4px 32px 4px 8px;
+  text-align: left;
+}
+.dropdownmenuitem a {
+  margin: 15px 0px;
+  text-decoration: none;
+}
+.dropdownmenuitem:hover {
+  cursor: pointer;
+}
+#profile:hover {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+#profiledropdownmenu div:hover {
+  background-color: #383838
+}
+
+#menudivider {
+  height: 0px;
+  margin: 5px 0px;
+  border: 1px solid #ffda0fe6;
+}

@@ -1,0 +1,43 @@
+#editprofilecontainer {
+  position: relative;
+  top: 60px;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 20px;
+}
+#editprofileheader {
+  border-bottom: 1px solid ;
+}
+#enterinfotable {
+  text-align: left;
+  -webkit-border-vertical-spacing: 10px;
+  font-size: 18px;
+  width: 50%;
+}
+
+#enterinfotable input {
+  font-size: 15px;
+  height: 30px;
+  background: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#enterinfotable input:focus-visible {
+  outline: none;
+  border: 3px solid #ffda0fe6;
+}
+
+#enterinfotable textarea {
+  font-size: 15px;
+  background: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#enterinfotable textarea:focus-visible {
+  outline: none;
+  border: 3px solid #ffda0fe6;
+}

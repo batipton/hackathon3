@@ -1,0 +1,106 @@
+/* SIDE NAVIGATION BAR STYLESHEET */
+
+/* side nav top container */
+.quicklinks {
+  float: left;
+  z-index: 2;
+  display: inline;
+  width: 300px;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+}
+
+/* site header */
+#headerbody {
+  background: #272727;
+  height:100%;
+  text-align: center;
+}
+#tipswrapper {
+  border-style: solid;
+  border-bottom-color: #ffda0fe6
+}
+#tipswrapper:hover {
+  cursor: pointer;
+  background-color: #383838;
+}
+#headertips {
+  color: #ffda0fe6;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  font-size: 35px;
+}
+
+/* quick link elements */
+#homewrapper:hover {
+  cursor: pointer;
+  background-color: #383838;
+  border-right-color: #ffda0fe6;
+  border-right-style: solid;
+  border-right-width: thick;
+}
+#home {
+  color: #ffda0fe6;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  font-size: 25px;
+}
+#popularwrapper:hover {
+  cursor: pointer;
+  background-color: #383838;
+  border-right-color: #ffda0fe6;
+  border-right-style: solid;
+  border-right-width: thick;
+}
+#popular {
+  color: #ffda0fe6;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  font-size: 25px;
+}
+#peoplewrapper:hover {
+  cursor: pointer;
+  background-color: #383838;
+  border-right-color: #ffda0fe6;
+  border-right-style: solid;
+  border-right-width: thick;
+}
+#people {
+  color: #ffda0fe6;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  font-size: 25px;
+}
+#profilewrapperUU:hover {
+  cursor: pointer;
+  background-color: #383838;
+  border-right-color: #ffda0fe6;
+  border-right-style: solid;
+  border-right-width: thick;
+}
+#profileheaderUU {
+  color: #ffda0fe6;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  font-size: 25px;
+}
+
+/* search bar and results */
+#searchwrapper {
+  display: inline-block;
+}
+#search {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 15px;
+  height: 25px;
+  width: 250px;
+  padding: 10px;
+}

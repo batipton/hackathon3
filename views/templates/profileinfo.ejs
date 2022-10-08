@@ -1,0 +1,24 @@
+<div class="info-container">
+  <div class="profile-picture-and-action-wrapper">
+    <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+    <h1 class="profile-item-name"><a href="/profile/<%= userinfo.name %>"><%= userinfo.name %></a></h1>
+    <div class="content-margin-separator"></div>
+    <div class="action-wrapper">
+      <% if(meta.home) { %>
+        <button class="edit-profile-button">Edit Profile</button>
+      <% } else { if(meta.following) { %>
+        <div class="action-btn-wrapper">
+          <button onclick="unfollow(`<%= userinfo.name %>`)" class="fol-unf-button">Unfollow</button>
+        </div>
+      <% } else {%>
+        <div class="action-btn-wrapper">
+          <button onclick="follow(`<%= userinfo.name %>`)" class="fol-unf-button">Follow</button>
+        </div>
+      <% }} %>
+    </div>
+  </div>
+  <div class="profile-info-item-separator"></div>
+  <div class="bio-wrapper">
+    <p><%= userinfo.bio %></p>
+  </div>
+</div>

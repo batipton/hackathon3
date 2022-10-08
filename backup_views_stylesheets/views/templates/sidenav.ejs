@@ -1,0 +1,40 @@
+<nav class="quicklinks">
+  <div id="headerbody">
+    <div id="tipswrapper" onclick="location.href = '/home'">
+      <h1 id="headertips">Tips</h1>
+    </div>
+    <div id="quicklinkswrapper">
+      <div id="homewrapper" onclick="location.href = '/home'">
+        <h1 id="home">Home</h1>
+      </div>
+      <div id="popularwrapper" onclick="location.href = '/popular'">
+        <h1 id="popular">Trending</h1>
+      </div>
+      <div id="peoplewrapper" onclick="location.href = '/people'">
+        <h1 id="people">People</h1>
+      </div>
+      <div id="profilewrapperUU" onclick="location.href = '/profile/<%= user.name %>'">
+        <h1 id="profileheaderUU">Profile</h1>
+      </div>
+      <div id="searchwrapper">
+        <input id="search" autocomplete="off" type="text" onkeyup="search()"></input>
+        <div id="search-results"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let itemName = /[\w-]+/.exec(window.location.pathname)[0] + "wrapper";
+    if(location.pathname === "/profile/<%= user.name %>") {
+      itemName = "profilewrapperUU";
+    }
+    let parent = document.getElementById("quicklinkswrapper");
+    for(let i = 0; i < parent.children.length; i++) {
+      if(parent.children[i].id == itemName) {
+        let navItem = parent.children[i];
+        navItem.style.borderRightColor = "#ffda0fe6";
+        navItem.style.borderRightStyle = "solid";
+        navItem.style.borderRightWidth = "thick";
+      }
+    }
+  </script>
+</nav>

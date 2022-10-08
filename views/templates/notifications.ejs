@@ -1,0 +1,17 @@
+<div class="show-notification-wrapper">
+  <% if(notifications.length > 0) { notifications.forEach(function(notification) { %>
+    <div class="profile-item-wrapper">
+      <div class="profile-item" style="margin-top: 0px">
+        <img src="/pictures/kitten.jpg" style="width: 40px; height: 40px; border: 1px solid #272a33; border-radius: 100%;"></img>
+        <div class="profile-name-and-bio">
+          <h1 class="profile-item-name"><a href="/profile/<%= notification.sender %>"><%= notification.sender %></a></h1>
+          <div class="notification-item-description-wrapper">
+            <p><%= notification.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } )} else { %>
+    <h2 style="text-align: center">Nothing to see here!</h2>
+  <% } %>
+</div>
